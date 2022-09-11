@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+:root {
+    --vermelho: #ed1e24;
+    --branco: #fff;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif
+}
+
+
+h2 {
+    font-size: 30px;
+}
+
+header {
+    background-color: rgba(259,99,152,.6);
+    color: var(--branco);
+    padding: 0 15px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+
+}
+
+.logo{
+    display: flex;
+    align-items:center;
+}
+
+#navbar-list li {
+    display: inline-block;
+}
+
+li a{
+    color: var(--branco);
+    margin: 0 10px;
+    font-size:12pt;
+}
+
+li a:hover{
+    border-bottom: 1px solid  #fff;
+
+}
+
+#navbar h2 {
+    line-height: 60px;
+    margin-left: 55px;
+}
+
+header i{
+    font-size: 22pt;
+    height: 40px;
+    margin:10px 10px 0;
+}
+
+
+
+/*fim da barra de navagação*/
+
+#banner{
+    height: 90vh;
+    background: url("../imagens/bg-projeto.jpg");
+    background-size: cover;
+    padding: 15vh;
+}
+
+#banner-info{
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--branco);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#banner-info img{
+    width: 120px;
+    background-color: var(--vermelho);
+    border-radius: 50%;
+    margin: 30px 0;
+}
+
+#banner-info h1{
+    width: 400px;
+}
+#banner-info h2{
+    border: 3px solid var(--vermelho);
+    font-weight: bold;
+    width: 350px;
+    margin: auto 0;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+#about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--branco);
+    background-color: var(--vermelho);
+    padding: 100px 0;
+    height: 80vh;
+}
+
+#about h2{
+    margin-bottom: 20px;
+    font-size: 30pt;
+}
+
+#about p{
+    width: 70%;
+    text-align: center;
+    line-height: 30px;
+}
+
+#skills{
+    background-color: var(--branco);
+    width: 80%;
+    margin: -100px auto;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#skills .container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+}
+
+.skill-container{
+    flex: 1 1 1;
+    text-align: center;
+    padding: 60px 25px;
+}
+
+.central{
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.skill-container img{
+    width:100px;
+}
+
+.skill-container h3{
+    color: var(--vermelho);
+    font-size: 20px;
+}
+
+#projetos{
+    margin-top: 150px;
+}
