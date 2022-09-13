@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
 
 :root {
-    --vermelho: #ed1e24;
     --branco: #fff;
+    --preto: #000;
+    --cinza: rgb(107, 107, 107);
+    --cinza-claro: rgb(182, 182, 182);
+    --azul: #3daef0f8;
 
 
 }
 
-* {
+-claro * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,158 +19,375 @@
     font-family: 'Roboto', sans-serif
 }
 
+nav .navbar-dark {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 0;
 
-h2 {
-    font-size: 30px;
 }
 
-header {
-    background-color: rgba(259,99,152,.6);
+
+.navbar-brand {
+    font-size: 18pt;
+    font-weight: bold;
+
+}
+
+i {
+    font-size: 20pt;
+}
+
+.logo {
+    font-size: 20pt;
+    color: var(--cinza-claro);
+}
+
+li a {
     color: var(--branco);
-    padding: 0 15px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap-reverse;
-    position: sticky;
-    top: 0;
-    overflow: hidden;
+    margin: 0 px;
+    font-size: 12pt;
+    font-weight: bold;
+    font-size: 13pt;
 
 }
 
-.logo{
-    display: flex;
-    align-items:center;
-}
 
-#navbar-list li {
-    display: inline-block;
-}
 
-li a{
-    color: var(--branco);
-    margin: 0 10px;
-    font-size:12pt;
-}
 
-li a:hover{
-    border-bottom: 1px solid  #fff;
+header i {
+    font-size: 30pt;
 
-}
-
-#navbar h2 {
-    line-height: 60px;
-    margin-left: 55px;
-}
-
-header i{
-    font-size: 22pt;
-    height: 40px;
-    margin:10px 10px 0;
 }
 
 
 
 /*fim da barra de navagação*/
 
-#banner{
-    height: 90vh;
+
+
+#banner {
+    height: 100vh;
     background: url("../imagens/bg-projeto.jpg");
     background-size: cover;
-    padding: 15vh;
+    padding: 20vh;
 }
 
-#banner-info{
-    width: 40%;
+#banner-info {
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     color: var(--branco);
-    padding: 50px;
+    padding: 15px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#banner-info img{
-    width: 120px;
-    background-color: var(--vermelho);
-    border-radius: 50%;
-    margin: 30px 0;
+
+
+
+#banner-info h1 {
+    font-size: 45pt;
 }
 
-#banner-info h1{
-    width: 400px;
-}
-#banner-info h2{
-    border: 3px solid var(--vermelho);
+#banner-info h2 {
+    font-size: 35pt;
     font-weight: bold;
-    width: 350px;
-    margin: auto 0;
+    margin: 20px 0;
     padding: 15px;
     border-radius: 20px;
 }
 
-#about{
+.links i {
+    font-size: 28pt;
+    margin: auto 15px;
+    color: var(--branco);
+    transition: .3s ease-in-out;
+}
+
+.links i:hover {
+    color: var(--azul);
+    transform: scale(1.2);
+}
+
+#about {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     color: var(--branco);
-    background-color: var(--vermelho);
-    padding: 100px 0;
-    height: 80vh;
+    background-color: var(--preto);
+    padding: 20px 0;
+    height: 100vh;
 }
 
-#about h2{
+#about h2 {
     margin-bottom: 20px;
     font-size: 30pt;
 }
 
-#about p{
-    width: 70%;
+#about p {
+    width: 50%;
     text-align: center;
     line-height: 30px;
+    font-size: 15pt;
+
 }
 
-#skills{
-    background-color: var(--branco);
-    width: 80%;
-    margin: -100px auto;
-    border-radius: 20px;
+#about img {
+    width: 250px;
+    border-radius: 50%;
+    margin: 30px 0;
+}
 
+#skills {
+    background-color: var(--branco);
+    width: 60%;
+    margin: -50px auto;
+    border-radius: 20px;
+    height: 100vh;
     display: flex;
     flex-direction: row;
-    
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 8px 17px var(--cinza-claro);
 }
 
-#skills .container{
+ .container h2{
+    margin-top: 80px;
+    text-align: center;
+    width: 100%;
+    font-size: 32pt;
+    font-weight: bold;
+    color: var(--cinza);
+}
+
+#skills .container {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    flex-wrap: wrap;
 
 }
 
-.skill-container{
-    flex: 1 1 1;
+.skill-container {
     text-align: center;
-    padding: 60px 25px;
+    padding: 60px 30px;
+    margin: 20px;
+    width: 300px;
 }
 
-.central{
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
+
+.skill-container i {
+    width: 100px;
+    font-size: 30pt;
+    margin-bottom: 50px;
+    animation: move 1s ease-in-out infinite alternate;
 }
 
-.skill-container img{
-    width:100px;
+@keyframes move {
+    from {
+        transform: translatey(-10px);
+
+    }
+
+    to {
+        transform: translatey(10px);
+    }
 }
 
-.skill-container h3{
-    color: var(--vermelho);
+.skill-container h3 {
+    color: var(--cinza);
     font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
-#projetos{
-    margin-top: 150px;
+.skill-container .subtitle {
+    font-weight: bold;
+    color: var(--cinza);
+    margin: 40px 0 15px 0;
+    text-align: center;
+
+}
+
+#jobs {
+    text-align: center;
+    padding-top: 15%;
+
+}
+
+#jobs h2 {
+    color: var(--cinza);
+    margin-bottom: 30px;
+    font-size: 32pt;
+    color: var(--cinza);
+    font-weight: bold;
+}
+
+#jobs p {
+    font-size: 15pt;
+    margin-bottom: 50px;
+}
+
+#jobs a {
+
+    font-weight: 700;
+    color: var(--cinza);
+    transition: .3s ease-in-out;
+}
+
+#jobs a:hover {
+    color: var(--azul);
+}
+
+.container-job {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+
+}
+
+.item {
+    margin: 10px;
+}
+
+
+footer {
+    background-color: var(--preto);
+    height: 50px;
+    color: var(--branco);
+    text-align: center;
+    padding: 10px;
+}
+
+footer .name {
+    font-weight: bold;
+}
+
+
+@media (min-width: 982px) {
+    .navbar-nav {
+        position: absolute;
+        right: 80px;
+    }
+
+    .navbar-brand {
+        position: absolute;
+        left: 80px;
+    }
+
+    .navbar-dark {
+        height: 80px;
+    }
+}
+
+@media screen  and (min-width: 320px) and (max-width: 786px) {
+
+    .logo{
+            position: relative;
+            left: 40px;
+    }
+    #banner {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #banner-info h1{
+        font-size: 25pt;
+
+    }
+
+    #banner-info h2{
+        font-size: 20pt;
+    }
+
+    #banner-info i{
+        font-size: 20pt;
+    }
+
+    .navbar-brand {
+        position: relative;
+        right: 90px;
+    }
+
+    #about{
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    #about img{
+        width:190px;
+    }
+
+    #about h2{
+        font-size: 20pt;
+
+    }
+
+    #about p{
+        font-size: 12pt;
+        width: 90%;
+    }
+
+    #skills {
+        width: 100%;
+        padding: 50px 0;
+        margin: 150px 0 100px 0;
+        box-shadow: none;
+    }
+    
+    .skill-container{
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    .skill-container i{
+        font-size: 20pt;
+    }
+
+    .skill-container h3{
+
+    }
+
+
+    #jobs{
+        width: 100%;
+        padding: 100px 20px;
+
+    }
+
+    #jobs h2{
+        font-size: 20pt;
+    }
+
+    #jobs p, a, i{
+        font-size: 12pt;
+    }
+
+
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 425px)  {
+    .logo{
+        display: none;
+    }
+    
+    .container h2{
+        margin-top: 120px;
+        }
+
+        #jobs h2{
+            margin-top: 50px;
+        }
 }
