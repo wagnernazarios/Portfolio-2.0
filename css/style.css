@@ -80,6 +80,7 @@ header i {
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: fadeInLeft 2s;
 }
 
 
@@ -109,6 +110,8 @@ header i {
     transform: scale(1.2);
 }
 
+
+
 #about {
     display: flex;
     flex-direction: column;
@@ -121,7 +124,7 @@ header i {
 }
 
 #about h2 {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     font-size: 30pt;
 }
 
@@ -129,7 +132,7 @@ header i {
     width: 50%;
     text-align: center;
     line-height: 30px;
-    font-size: 15pt;
+    font-size: 15pt;   
 
 }
 
@@ -213,7 +216,7 @@ header i {
 
 #jobs {
     text-align: center;
-    padding-top: 15%;
+    padding-top: 12%;
 
 }
 
@@ -298,6 +301,7 @@ footer .name {
 
     #banner-info h1{
         font-size: 25pt;
+        font-weight: bold;
 
     }
 
